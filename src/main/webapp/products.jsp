@@ -117,6 +117,7 @@
         <div class="box item_box">
           <div class="detail_item">
             <div class="container_detail">
+
               <div class="alpha">
                 <div class="img-box">
                   <img src="<%= p.getImg()%>" alt="">
@@ -132,6 +133,19 @@
                   </h7>
                 </div>
               </div>
+
+            </div>
+            <div class="bottom">
+              <div class="muagay">
+                <a>Mua ngay</a>
+              </div>
+              <div class="addtocart">
+                <a>Thêm vào giỏ hàng</a>
+              </div>
+              <div class="viewdetail">
+                <a>Chi tiết sản phẩm</a>
+              </div>
+
             </div>
           </div>
           <div class="img-box">
