@@ -1,4 +1,7 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.beans.Product" %>
 <%@page contentType="text/html; charset=UTF-8" language="java" %>
+<% List<Product> data = (List<Product>) request.getAttribute("data"); %>
 <html>
 
 <head>
@@ -52,7 +55,7 @@
                   <a class="nav-link" href="about.html"> Giới thiệu </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="shop.html"> Sản phẩm </a>
+                  <a class="nav-link" href="shop.jsp"> Sản phẩm </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="glass.html"> Chất lượng </a>
@@ -106,28 +109,27 @@
         </div>
       </div>
       <div class="glass_container">
+      <% for (Product p:data) {%>
         <div class="box item_box" type="gucci">
+
           <div class="detail_item">
             <div class="container_detail">
               <div class="alpha">
                 <div class="img-box">
-                  <img src="images/gucci GG0116S-001.jpg" alt="">
+                  <img src="<%= p.getImg()%>>" alt="">
                 </div>
               </div>
               <div class="omega">
                 <div class="infor">
                   <h5>
-                    Kính mát Gucci GG0116S-001
+                    <%= p.getName()%>>
                   </h5>
                   <h6>
-                    Mã sản phẩm : GG0116S-001
+
                   </h6>
                   <h7>
-                    6.599.000đ
+                    <%= p.getPrice()%>>
                   </h7>
-                  <a href="">
-                    Mua ngay
-                  </a>
                 </div>
               </div>
             </div>
@@ -138,21 +140,19 @@
             </div>
           </div>
           <div class="img-box">
-            <img src="images/gucci GG0116S-001.jpg" alt="">
+            <img src="<%= p.getImg()%>>" alt="">
           </div>
           <div class="price">
             <h5>
-              Kính mát Gucci GG0116S-001
+              <%= p.getName()%>>
             </h5>
             <h6>
-              6.599.000đ
+              <%= p.getPrice()%>>
             </h6>
-              <a href="">
-                Mua ngay
-              </a>
           </div>
         </div>
-      </div>
+        </div>
+      <% }; %>
       <!-- <div class="btn-box">
         <a href="">
           Xem thêm

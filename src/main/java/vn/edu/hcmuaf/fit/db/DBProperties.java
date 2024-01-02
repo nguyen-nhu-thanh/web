@@ -24,16 +24,16 @@ public class DBProperties {
 
 
     public static String getUsername() {
-        return prop.get("db.username").toString();
+        return prop.get("db.user").toString();
     }
 
     public static String getPassword() {
         return prop.get("db.password").toString();
     }
 
-    public static String getDbOption() {
-        return prop.get("db.options").toString();
-    }
+//    public static String getDbOption() {
+//        return prop.get("db.options").toString();
+//    }
 
     public static String getDbName() {
         return prop.get("db.databaseName").toString();

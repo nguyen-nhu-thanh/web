@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.fit.services;
 
 import vn.edu.hcmuaf.fit.beans.Product;
 import vn.edu.hcmuaf.fit.beans.User;
+import vn.edu.hcmuaf.fit.dao.ProductDAO;
 import vn.edu.hcmuaf.fit.db.JDBIConnector;
 
 import java.math.BigInteger;
@@ -28,11 +29,7 @@ public class ProductService {
     }
 
     public  List<Product> getAll(){
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT * FROM products")
-                    .mapToBean(Product.class)
-                    .list();
-        });
+        return ProductDAO.getAll();
     }
 
     public User checkLogin(String username, String password) {

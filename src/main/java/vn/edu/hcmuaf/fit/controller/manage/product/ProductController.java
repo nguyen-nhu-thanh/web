@@ -10,10 +10,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
-@WebServlet(name = "Index", value = "/manage/product/index")
-public class product extends HttpServlet {
+@WebServlet(name = "ProductController", value = "/products")
+public class ProductController extends HttpServlet {
     private static String name="product";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,6 +37,8 @@ public class product extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        List<Product> all = ProductService.getInstance().getAll();
+        request.setAttribute("data", all);
+        request.getRequestDispatcher("products.jsp").forward(request,response);
     }
 }
