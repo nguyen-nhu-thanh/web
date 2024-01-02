@@ -2,15 +2,15 @@ package vn.edu.hcmuaf.fit.beans;
 
 import java.io.Serializable;
 
-public class Reource implements Serializable {
+public class Resource implements Serializable {
     private int id;
     private String nam;
     private int status;
 
-    public Reource() {
+    public Resource() {
     }
 
-    public Reource(int id, String nam, int status) {
+    public Resource(int id, String nam, int status) {
         this.id = id;
         this.nam = nam;
         this.status = status;

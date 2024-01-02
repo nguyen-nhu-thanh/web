@@ -13,9 +13,7 @@ public class Product implements Serializable {
     private String description;
     private String img;
     private int price;
-    private int sellPrice;
     private int quantity;
-    private int createBy;
 
     public Product() {
     }
@@ -26,9 +24,7 @@ public class Product implements Serializable {
         this.description = description;
         this.img = img;
         this.price = price;
-        this.sellPrice = sellPrice;
         this.quantity = quantity;
-        this.createBy = createBy;
     }
 
     public String getId() {
@@ -71,28 +67,12 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public int getSellPrice() {
-        return sellPrice;
-    }
-
-    public void setSellPrice(int sellPrice) {
-        this.sellPrice = sellPrice;
-    }
-
     public int getQuantity() {
         return quantity;
     }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public int getCreateBy() {
-        return createBy;
-    }
-
-    public void setCreateBy(int createBy) {
-        this.createBy = createBy;
     }
 
     @Override
@@ -102,18 +82,17 @@ public class Product implements Serializable {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", sellPrice=" + sellPrice +
                 ", quantity=" + quantity +
                 '}';
     }
 
-    public boolean checkAccess(HttpServletRequest request){
-        HttpSession session = request.getSession();
-        if(session==null) return false;
-        User u= (User) session.getAttribute("auth");
-        if(u==null)return  false;
-        if(u.getRole()==0) return false;
-        if(u.getRole()>=2) return true;
-        return this.createBy == u.getId();
-    }
+//    public boolean checkAccess(HttpServletRequest request){
+//        HttpSession session = request.getSession();
+//        if(session==null) return false;
+//        User u= (User) session.getAttribute("auth");
+//        if(u==null)return  false;
+//        if(u.getRole()==0) return false;
+//        if(u.getRole()>=2) return true;
+//        return this.createBy == u.getId();
+//    }
 }

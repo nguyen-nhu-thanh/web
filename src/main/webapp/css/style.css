@@ -343,6 +343,7 @@ a:focus {
     background-color: #bcc4f2;
 }
 
+
 .glass_section .heading_container h2 {
     color: #6f6e6e;
     margin-bottom: 35px;
@@ -368,6 +369,9 @@ a:focus {
 }
 .glass_section .glass_container .item_box {
     position: relative;
+}
+.glass_section .row {
+
 }
 .glass_section .glass_container .box {
     width: 265px;

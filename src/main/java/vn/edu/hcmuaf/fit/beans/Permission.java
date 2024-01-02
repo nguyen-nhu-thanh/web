@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Permission implements Serializable {
     private int id;
-    private List<Reource> reources;
+    private List<Resource> resources;
     private int uId;
 
     private int per;
@@ -13,9 +13,9 @@ public class Permission implements Serializable {
     public Permission() {
     }
 
-    public Permission(int id, List<Reource> reources, int uId, int per) {
+    public Permission(int id, List<Resource> resources, int uId, int per) {
         this.id = id;
-        this.reources = reources;
+        this.resources = resources;
         this.uId = uId;
         this.per = per;
     }
@@ -28,12 +28,12 @@ public class Permission implements Serializable {
         this.id = id;
     }
 
-    public List<Reource> getReources() {
-        return reources;
+    public List<Resource> getReources() {
+        return resources;
     }
 
-    public void setReources(List<Reource> reources) {
-        this.reources = reources;
+    public void setReources(List<Resource> reources) {
+        this.resources = reources;
     }
 
     public int getuId() {

@@ -1,7 +1,10 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.beans.Product" %>
+<%@ page import="vn.edu.hcmuaf.fit.dao.ProductDAO" %>
 <%@page contentType="text/html; charset=UTF-8" language="java" %>
-<% List<Product> data = (List<Product>) request.getAttribute("data"); %>
+<% List<Product> list = (List<Product>) request.getAttribute("data");
+    list = ProductDAO.getAll();
+%>
 <html>
 
 <head>
@@ -55,7 +58,7 @@
                   <a class="nav-link" href="about.html"> Giới thiệu </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="shop.jsp"> Sản phẩm </a>
+                  <a class="nav-link" href="products.jsp"> Sản phẩm </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="glass.html"> Chất lượng </a>
@@ -109,50 +112,45 @@
         </div>
       </div>
       <div class="glass_container">
-      <% for (Product p:data) {%>
-        <div class="box item_box" type="gucci">
-
+        <div class="row">
+      <% for (Product p : list){ %>
+        <div class="box item_box">
           <div class="detail_item">
             <div class="container_detail">
               <div class="alpha">
                 <div class="img-box">
-                  <img src="<%= p.getImg()%>>" alt="">
+                  <img src="<%= p.getImg()%>" alt="">
                 </div>
               </div>
               <div class="omega">
                 <div class="infor">
                   <h5>
-                    <%= p.getName()%>>
+                    <%= p.getName()%>
                   </h5>
-                  <h6>
-
-                  </h6>
                   <h7>
-                    <%= p.getPrice()%>>
+                    <%= p.getPrice()%> đ
                   </h7>
                 </div>
               </div>
             </div>
-
-            <div class="comment">
-              <h5>Bình luận : </h5>
-              <input type="text" name="" placeholder="Để lại bình luận">
-            </div>
           </div>
           <div class="img-box">
-            <img src="<%= p.getImg()%>>" alt="">
+            <img src="<%= p.getImg()%>" alt="">
           </div>
           <div class="price">
             <h5>
-              <%= p.getName()%>>
+              <%= p.getName()%>
             </h5>
             <h6>
-              <%= p.getPrice()%>>
+              <%= p.getPrice()%> đ
             </h6>
           </div>
         </div>
+      <% } %>
         </div>
-      <% }; %>
+
+        </div>
+
       <!-- <div class="btn-box">
         <a href="">
           Xem thêm
