@@ -136,14 +136,14 @@
 
             </div>
             <div class="bottom">
-              <div class="muagay">
+              <div class="buynow button_detail_box">
                 <a>Mua ngay</a>
               </div>
-              <div class="addtocart">
-                <a>Thêm vào giỏ hàng</a>
+              <div class="addtocart button_detail_box">
+                <a >Thêm vào giỏ hàng</a>
               </div>
-              <div class="viewdetail">
-                <a>Chi tiết sản phẩm</a>
+              <div class="viewdetail button_detail_box">
+                <a href="single_product.html">Chi tiết sản phẩm</a>
               </div>
 
             </div>
