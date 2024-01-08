@@ -10,20 +10,20 @@ import java.io.Serializable;
 public class Product implements Serializable {
     private String id;
     private String name;
-    private String description;
-    private String img;
     private int price;
+    private String img;
+    private String description;
     private int quantity;
 
     public Product() {
     }
 
-    public Product(String id, String name, String description, String img, int price, int sellPrice, int quantity, int createBy) {
+    public Product(String id, String name, int price, String img, int sellPrice,String description, int quantity, int createBy) {
         this.id = id;
         this.name = name;
-        this.description = description;
-        this.img = img;
         this.price = price;
+        this.img = img;
+        this.description = description;
         this.quantity = quantity;
     }
 
@@ -80,8 +80,8 @@ public class Product implements Serializable {
         return "Product{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
                 ", price=" + price +
+                ", description='" + description + '\'' +
                 ", quantity=" + quantity +
                 '}';
     }

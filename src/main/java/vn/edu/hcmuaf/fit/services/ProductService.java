@@ -32,6 +32,7 @@ public class ProductService {
         return ProductDAO.getAll();
     }
 
+
     public User checkLogin(String username, String password) {
         List<User> users = JDBIConnector.get().withHandle(h ->
                 h.createQuery("SELECT * FROM user WHERE username = ?")

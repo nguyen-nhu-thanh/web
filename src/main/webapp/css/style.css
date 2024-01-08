@@ -54,6 +54,9 @@ body {
 }
 
 /*header section*/
+.form-inline {
+    background-color: #0c0c0c ;
+}
 .hero_area {
     height: 100vh;
 }

@@ -31,10 +31,6 @@ public class DBProperties {
         return prop.get("db.password").toString();
     }
 
-//    public static String getDbOption() {
-//        return prop.get("db.options").toString();
-//    }
-
     public static String getDbName() {
         return prop.get("db.databaseName").toString();
     }

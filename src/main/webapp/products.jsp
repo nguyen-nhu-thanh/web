@@ -143,7 +143,7 @@
                 <a >Thêm vào giỏ hàng</a>
               </div>
               <div class="viewdetail button_detail_box">
-                <a href="single_product.html">Chi tiết sản phẩm</a>
+                <a href="single_product.jsp">Chi tiết sản phẩm</a>
               </div>
 
             </div>
